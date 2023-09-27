@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+<body>
+    <div class="calculator">
+        <label for="num1">Enter num 1:</label>
+        <input type="number" id="num1">
+        <br><br>
+        <label for="num2">Enter num 2:</label>
+        <input type="number" id="num2">
+        <br><br>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function multiply() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                var result = num1 * num2;
+                document.getElementById("result").textContent = "Result is: " + result;
+            } else {
+                alert("Please enter valid numbers.");
+            }
+        }
+
+        function divide() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                if (num2 !== 0) {
+                    var result = num1 / num2;
+                    document.getElementById("result").textContent = "Result is: " + result;
+                } else {
+                    document.getElementById("result").textContent = "Cannot divide by zero.";
+                }
+            } else {
+                alert("Please enter valid numbers.");
+            }
+        }
+    </script>
+</body>
+</html>

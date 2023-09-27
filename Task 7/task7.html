@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rev">
+        <label for="number">Enter Number</label>
+        <input type="text" id="c">
+        <br>
+        <div id="result" style="display:none;">
+            <p>Reversed Number:</p>
+            <p id="reversedNumber"></p>
+        </div>
+        <br>
+        <button id="rever" onclick="f1()">Reverse</button>
+    </div>
+    <script>
+        function f1(){
+            var c = document.getElementById("c").value;
+            var b = c.split("");
+            var d = b.reverse();
+            var e = d.join("");
+            
+            
+            document.getElementById("result").style.display = "block";
+            document.getElementById("reversedNumber").textContent = e;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rev">
+        <label for="text">Enter Text</label>
+        <input type="text" id="c">
+        <br>
+        <div id="result" style="display:none;">
+            <p>Alphabetical Text:</p>
+            <p id="sortedstring"></p>
+        </div>
+        <br>
+        <button id="sort" onclick="sortString()">Sort</button>
+    </div>
+    <script>
+        function sortString(){
+            var c = document.getElementById("c").value;
+            var sortedString = c.split("").sort().join(""); // Sort the string alphabetically
+            
+            document.getElementById("result").style.display = "block";
+            document.getElementById("sortedstring").textContent = sortedString;
+        }
+    </script>
+</body>
+</html>

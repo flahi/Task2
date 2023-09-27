@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 4</title>   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+</head>
+
+<style>
+    .card {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .card {
+        margin-top: 10px;
+        box-sizing: border-box;
+        border-radius: 2px;
+        background-clip: padding-box;
+        min-height: 500px;
+    }
+
+    .card span.card-title {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    .card .card-image {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card .card-image img {
+        border-radius: 2px 2px 0 0;
+        background-clip: padding-box;
+        position: relative;
+        z-index: -1;
+    }
+
+    .card .card-image span.card-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 16px;
+    }
+
+    .card .card-content {
+        padding: 16px;
+        border-radius: 0 0 2px 2px;
+        background-clip: padding-box;
+        box-sizing: border-box;
+    }
+
+    .card .card-content p {
+        margin: 0;
+        color: inherit;
+    }
+
+    .card .card-content span.card-title {
+        line-height: 48px;
+    }
+
+    .card .card-action {
+        border-top: 1px solid rgba(160, 160, 160, 0.2);
+        padding: 16px;
+    }
+
+    .card .card-action a {
+        color: #ffab40;
+        margin-right: 16px;
+        transition: color 0.3s ease;
+        text-transform: uppercase;
+    }
+
+    .card .card-action a:hover {
+        color: #ffd8a6;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="img-responsive"
+                            src="https://equalitymag.com/wp-content/uploads/2014/10/equality-mag.jpg" style="height: 200px;"  />
+                        <span class="card-title">Material Cards</span>
+                    </div>
+
+                    <div class="card-content">
+                        <p>
+                            Cards for display in portfolio style material design by Google.
+                        </p>
+                    </div>
+
+                    <div class="card-action">
+                        <a href="#" target="new_blank">Link</a>
+                        <a href="#" target="new_blank">Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="img-responsive" src="data:image/jpeg;base64,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" 
+                        style="height: 200px;">
+                        <span class="card-title">Material Cards</span>
+                    </div>
+
+                    <div class="card-content">
+                        <p>
+                            Cards for display in portfolio style material design by Google.
+                        </p>
+                    </div>
+
+                    <div class="card-action">
+                        <a href="#" target="new_blank">Link</a>
+                        <a href="#" target="new_blank">Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="img-responsive" src="data:image/jpeg;base64,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" 
+                        style="height: 200px;">
+                    <span class="card-title">Material Cards</span>
+                    </div>
+
+                    <div class="card-content">
+                        <p>
+                            Cards for display in portfolio style material design by Google.
+                        </p>
+                    </div>
+
+                    <div class="card-action">
+                        <a href="#" target="new_blank">Link</a>
+                        <a href="#" target="new_blank">Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="img-responsive" src="data:image/jpeg;base64,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" 
+                        style="height: 200px;">
+                        <span class="card-title">Material Cards</span>
+                    </div>
+
+                    <div class="card-content">
+                        <p>
+                            Cards for display in portfolio style material design by Google.
+                        </p>
+                    </div>
+
+                    <div class="card-action">
+                        <a href="#" target="new_blank">Link</a>
+                        <a href="#" target="new_blank">Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

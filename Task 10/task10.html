@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+</head>
+<body>
+    <h1>Date and Time Display</h1>
+    
+    <button onclick="showDate()">Show Date</button>
+    <button onclick="showTime()">Show Time</button>
+    <br><br>
+    <div id="output"></div>
+
+    <script>
+        function showDate() {
+            var currentDate = new Date();
+            var dateOutput = currentDate.toLocaleDateString();
+            document.getElementById("output").textContent = "Current Date: " + dateOutput;
+        }
+
+        function showTime() {
+            var currentTime = new Date();
+            var timeOutput = currentTime.toLocaleTimeString();
+            document.getElementById("output").textContent = "Current Time: " + timeOutput;
+        }
+    </script>
+</body>
+</html>

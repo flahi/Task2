@@ -1,0 +1,32 @@
+body {
+            
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#registration-box {
+    background: radial-gradient(circle at 82.8% 5.3%, rgb(255, 212, 163) 0%, rgb(255, 200, 252) 90%);
+    border: 1px solid #000; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+h1 {
+    color: blue;
+    text-align: center;
+}
+input {
+    padding: 2px;
+}
+#submit {
+    background-color: red;
+    border-radius: 25px;
+    padding: 5px 45px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    margin-left: 40%;
+}
